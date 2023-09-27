@@ -5,10 +5,10 @@ class ShutDown{
         //  for window 
             Process process = Runtime.getRuntime().exec("shutdown -s -t 0");
 
-         //for mac wihtout password
+         //for mac without password
              Process process = Runtime.getRuntime().exec("sudo shutdown -h now");
 
-         //for mac with pass wrod 
+         //for mac with password 
             String password = "jaza";
             String command = "echo " + password + " | sudo -S shutdown -h now";
             Process process = Runtime.getRuntime().exec(new String[] {"/bin/bash", "-c", command});
@@ -16,7 +16,7 @@ class ShutDown{
 
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("cathc block");
+            System.out.println("catch block");
         }
     }
 };
@@ -40,3 +40,5 @@ class ShutDown{
 
 
 
+// ref link basic = https://www.tutorialspoint.com/what-is-the-purpose-of-process-class-in-java#:~:text=The%20java.,therefore%2C%20it%20cannot%20be%20instantiated.
+// ref link details = https://www.geeksforgeeks.org/java-lang-runtime-class-in-java/
